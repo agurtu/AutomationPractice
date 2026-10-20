@@ -1,0 +1,507 @@
+########################### Create GitHub Account #######################
+1. Go to  GitHub.com
+2. Click on signup button.
+3. Enter email id
+4. Enter password
+5. Provide unique Username
+6. click on checkbox -> click on create account button.
+7. It will show some puzzle to verify -> we have to solve.
+8. User will receive verification code on mail -> provide code on GitHub acreen.
+9. Account creation is Successful.
+
+######################## Create Repository ########################
+1. Go to GitHub account 
+2. click on create repository button.
+3. provide repository name : Automation Practice
+4. Provide description.
+5. Select Repo visibility option Public/Private.
+6. Select readme file option.
+7. click on create repository button.
+8. Repository created successfully.
+
+##################### Install GitHub client #############
+1. Download git client from given link
+https://github.com/git-for-windows/git/releases/download/v2.53.0.windows.2/Git-2.53.0.2-64-bit.exe
+
+2.  double click on exe file and Initiate installation with exe
+    and select all default option and complete the installation.
+
+3. Create a  folder in C Drive with name as C:\GithubCode
+
+4. Open folder right click -> show more option -> click on open git bash here.
+
+5.  It will open git terminalin C:\github folder.
+
+6. run a command to check git option
+   git --help
+
+
+################### Add User Credentials in Config #############
+
+1. Open git terminal in C:\GitCode folder
+2. run below command to open config file
+  -> git config --global --edit
+  -> It will open config file in vi editor
+
+3. press i to enable insert mode  it should show --insert-- in bottom.
+4. now use keyboard arrows and update name, and email with git username and git email.
+  [user]
+        name = Divya4255
+        email = divya.smsrinivas1995@gmail.com
+
+5. Press ESCAPE key to disabled insert mode.
+6. start type :wq and press enter
+   ->  it will save the configuration details.
+
+############ Clone Repository for User ##################
+1.  Go to GitHub server login with credentials
+2. Navigate to repository that we have already created.
+3. click on Code (green color) button , copy repository from their.
+4. Open git terminal in C:\\gitCode folder.
+5. Run below command to clone the repo
+   ->  git clone https://github.com/Divya4255/AutomationPractice.git
+
+6. Hit Enter ->  It will clone repository from server to your local machine.
+7. Repository folder will created on local machine.
+
+
+###################### Create New File and Push to Server ####################
+1. Open git repository folder locally.
+2. Create a text file side the folder and rename as demo_file.txt
+3. Open text file and add some content in the file ->  save the file.
+4. Open git terminal in C:\GitCode folder.
+5. Run ls command and check available directory -> It should show your repo folder e.g AutomationPractice
+6. cd "AutomationPractice" Folder. -> It will change your current directory as C:\GitCode\AutomationPractice
+7. run git status command 
+   ->  git status :  it will show new demo file in red color.
+8.  run git add command
+   -> git add file_path/filename  # It will add file in GitHub tracking
+
+9.  Check status again.
+   -> git status # It will show demo file in green color.
+
+10. Initiate commit operation
+   ->  git commit -m "adding new file to repo"
+   ->  It will complete commit operation.
+
+11. Initiate git push operation.
+   ->  git push
+   ->  It will launch a popup 
+   ->  Click n open in browser option
+   ->  It will open in browser and click n Authorize git ecosystem button.
+   ->  Now push will be successful and file will be push to the server.
+
+
+Home Work :
+1. Create three different file and push  to the server.
+2. Update file1 and push(git status, git add, git commit, git push) it.
+3. Rename file2 and push it from terminal.
+4. Delete file3 and push it from terminal.
+
+######################## Create Common Repo and Provide Access #################
+
+1. Create Repository with name : GTM_PlaywrightTS_BATCH11
+2. Get students email and provide Access to collaborate.
+   Go to Repo -> Settings -> Collaborators -> Add People -> Enter Your email -> Select User -> Add to Repository
+3. People will receive invitation on mail
+4. Open email -> click on view invitation -> accept invitation. 
+5. Everyone has to accept the invitation.
+6. Once the invitation is accepted, user will be able see common repository.
+
+
+######################## Clone Common Repo Add folder your name #############
+
+1. Go to common repository ->  click on code (button green button)
+   -> click on copy clipboard to copy URL.
+
+2. Open git terminal in GitHub code folder on local system
+ 
+3. Run this command to clone repo
+   ->  git clone https://github.com/sqatools/GTM_PlaywrightTS_BATCH11.git
+
+4. It will clone new folder on local directory.
+5. Create folder with your name in repo e.g. Deepesh and Add file inside the your folder e.g. first_file.txt
+
+6. Navigate back to git terminal.
+
+7. ON git terminal run below command to go inside repository folder.
+   cd  GTM_PlaywrightTS_BATCH11 -> It will open GTM_PlaywrightTS_BATCH11 folder.
+
+8. Check status using below command
+   ->  git status : New Folder name will show in red color.
+
+9. Run git add command
+   ->  git add /FolderName
+
+10. Initiate commit operation.
+   ->  git commit -m "added"
+
+11.  Perform git push operation
+    -> git push
+
+12. If push is rejected repeat this steps until push it not successful.
+    ->  git pull
+    ->  it will open merge editor
+    ->  we have to close the edit with command using :wq (save file)
+    ->  Once the edit is closed, re-initiate the push operation
+    ->  git push
+    ->  if push is still rejected (Repeat again from "git pull" command)
+
+
+
+
+
+###################### Multi branching in git #####################
+1. Go to Git Repository on server : GTM_PlaywrightTS_BATCH11
+2. Click on repository dropdown.  default is main
+3. click on view all branches.
+4. Create branch with your name e.g.  deepesh_branch.
+   -> New Branch
+   -> Provide Branch Name e.g. firstname_branch
+   -> click on create branch button
+   -> Verify branch is created successfully.
+
+5. Open git terminal in repository folder 
+6. run command to update the repo
+   ->  git pull  (all newly created branches will show in the console output)
+
+7. Check current active branch
+   ->  git branch  :  It will show main as active branch in green color.
+
+
+8. Switch to new branch.
+   ->  git checkout deepesh_branch
+
+9. check again active branch
+   ->  git branch : your branch will show as active branch in green color e.g. deepesh_branch
+
+
+10. Go to your dedicated folder and add file inside the folder
+    Folder Name : Deepesh
+    Filename :  deepesh_feature_file.txt (don't add space in filename)
+
+
+11 Go back to terminal and check status
+   ->  git status : newly added file will show in red color
+
+12. Run git add command
+   -> git add <file_path>
+
+13. Initiate commit operation
+   -> git commit -m "added new file to feature branch"
+
+14. Initiate push operation
+   -> git push : file will push to the server on dedicated branch.
+
+15. Go to GitHub server and verify file is available in dedicated folder in your branch.
+
+######################### Create pull from server ###############################
+
+1. Go to server and navigate to repository.
+2. Click on "Compare & pull request" button (green button)
+3. Provide pull request description.
+4. Add reviwers to review the code.
+5. Click on create pull button.
+
+
+######################### Create workflow file in branch ###############################
+1. Go to repository on GitHub server
+2. Navigate to Actions Tab.
+3. Click on New Workflow (green color) button
+4. Select any workflow from given list. e.g. simple workflow
+5. click on configure button
+6. Select your branch from left side dropdown e.g. deepesh_branch.
+7. Provide workflow name default name is blank.yml
+   default path: GTM_Playwright_Batch11/.gitHub/workflow/blank.yml
+
+   keep this path alive
+    pull_request:
+    	branches: [ "main" ]
+
+    remove this part:  this will execute workflow for every single push
+    push:
+         branches: [ "main" ]
+
+8. click on commit changes button.
+9. It will open pop to provide commit message ->  we can click on commit changes
+   and push to the current branch.
+10. It will create workflow on your dedicated branch and execute along with each 
+   PR.
+11. Now create pull request from feature branch to main branch.
+12. Once the pull request is created, it will initiate Github action.
+13. There is checks tabs in pull request, it will show currently executed git actions.
+14. Git action will auto tracking we mention in the work, it should trigger when we raise pull request.
+     pull_request:
+    	branches: [ "main" ]
+
+
+
+
+
+
+
+################ Resolve Merge conflict ######################
+#### conflict scenario #########
+1. Create file1 in main branch add some code from line 1 to 10.
+2. Create new branch from main branch and then modify same file1 and same line numbers from 1 to 10.
+3. In main branch, modify same on same number of lines and push it.
+4. Create pull request from feature to main branch
+5. It will create conflict.
+6. We have to resolve conflict and merge the change
+
+##### Steps to reproduce conflict scenario ######
+
+1. Open git terminal in repository folder.
+   -> make sure your current active branch should be main
+   -> if not then you can switch to main branch.
+   -> 'git checkout main' # it will switch to main branch.
+   -> 'git pull' : Update your main branch with all change from server.
+   -> 'git branch' : current active branch should be main branch in green color
+
+
+2. Create a file with name e.g. dy_conflict_file.txt, and code snipet in the file, and save the file.
+   var num1 = 10
+   if (num1%2 == 0) {
+       console.log("This is even number")
+   } else {
+       console.log("This is odd number")	
+   }
+   
+3.  Push file to main branch.
+   ->  git status:  show file in read color
+   ->  git add  <filename>
+   ->  git status :  show file in green color
+   ->  git commit -m "added file"
+   ->  git push :  It push is rejected, then pull the code and perform push operation.
+   ->  git pull : it will open editor, we have close it with :wq! command.
+   ->  then try to push again, repeat (pull, push), until it is not successful.
+
+
+4. Create a branch from local git bash terminal.
+   ->  git checkout -b "dy_conflict_branch"
+
+5. Update dy_conflict_file.txt file as given below.
+
+  if (num1%2 == 0) {
+       console.log("This is even number, divisible by 2")
+   } else {
+       console.log("This is odd number, not divisible by 2")	
+   }
+
+6. go back to terminal and run below command 
+   -> git status : shows in red color
+   -> git add <file_name>
+   -> git status :  shows file in green color
+   -> git commit -m "initiate commit operation"
+   
+
+7. run below command to push local branch to server
+   -> git push --set-upstream origin dy_conflict_branch
+   -> push will be successful in feature.
+
+
+8. change branch from conflict branch to main branch in terminal
+   ->  git checkout main
+   ->  git pull :  it will update all changes from server to local machine.
+
+
+9. Open conflict file in your folder and update few change in file content.
+   var num1 = 10
+   if (num1%2 == 0) {
+      console.log("condition is True")
+      console.log("This is even number, can divide by 2")
+   } else {
+      console.log("condition is False")
+      console.log("This is odd number, can not divide by 2")	
+   } 
+
+10.  push the file change in main branch.
+   -> git status
+   -> git add <path>
+   -> git commit -m "updated file"
+   -> git push (repeat pull and push commands)
+
+11. Go to GitHub server and create pull request from conflict branch to main branch
+    -> go to repository
+    -> search your branch name and select the branch.
+    -> if the branch is old, then it will show contribute button
+    -> click on contribute button and click on 'Open pull request' button.
+    -> Provide request details (reviewer, description assignee)
+    -> click on create pull request button.
+
+12.  It will show merge conflict between main branch and feature branch.
+    -> 'merge pull request' button will be in disable state.
+
+    This branch has conflicts that must be resolved
+    Use the web editor or the command line to resolve conflicts before continuing.
+
+    Deepesh/dy_conflict_file.txt
+
+------ Resolve merge conflict locally ------
+
+13.  Go back to git terminal
+14.  switch to feature branch.
+     -> git checkout dy_conflict_branch
+
+15.  run a command on terminal to update feature branch with main branch
+     ->  git pull origin main
+     ->  it will show conflict message on terminal
+
+         Auto-merging Deepesh/dy_conflict_file.txt
+         CONFLICT (content): Merge conflict in Deepesh/dy_conflict_file.txt
+         Automatic merge failed; fix conflicts and then commit the result.
+
+
+16. Open dy_conflict_file.txt on local machine, will show below content
+
+
+var num1 = 10
+if (num1%2 == 0) {
+
+#### HEAD :  change from feature  BRANCH (dy_conflict_branch)
+<<<<<<< HEAD
+   console.log("This is even number, divisible by 2")
+} else {
+   console.log("This is odd number, not divisible by 2")	
+=======
+
+###### Changes from MAIN branch   
+
+   console.log("condition is True")
+   console.log("This is even number, can divide by 2")
+} else {
+   console.log("condition is False")
+   console.log("This is odd number, can not divide by 2")	
+>>>>>>> 9f9d33c6d4f9d945d512c3b40e36783b758295fd
+}
+
+
+17. Update the file content as per your requirements.
+   
+	var num1 = 10
+	if (num1%2 == 0) {
+   		console.log("condition is True")
+   		console.log("This is even number, divisible by 2")
+	} else {
+   		console.log("condition is False")
+   		console.log("This is odd number, not divisible by 2")	
+	}
+
+
+18.  go to git terminal and run below commands
+     ->  git status : It will show in red color
+     ->  git add <update file>
+     ->  git commit -m "resolved merge"
+     ->  git push
+
+19. Once the push is successful, merge will conflict will be resolved in pull request
+    -> Now go back to git server and check pull request, there is no conflict anymore.
+
+20. We can merge changes from feature to main branch.
+
+##########################################
+# check recent changes in file in git console
+->  git diff <filename>
+
+# restore already added file
+->  git restore --staged  Deepesh/first_file2.txt
+
+# temporarily add modified changes
+->  git stash
+
+# remove untracked file
+->  git clean -f 
+
+# remove untracked file with folder 
+->  git clean -df
+
+# fetch changes from server without merge operation
+->  git fetch
+
+# command to create new branch and switch to branch.
+->  git checkout -b "branch name"
+
+# command to create branch but don't want to switch to branch
+->  git checkout "branch name"
+
+# command to delete the branch
+->  git branch -d temp2_branch temp_branch
+
+Deleted branch temp2_branch (was 2ecee55).
+Deleted branch temp_branch (was 2ecee55).
+
+
+# command to reset local change 
+-> git reset --hard
+
+#  git checkout f0913a59fd1d0259990b264d906bdecd3488a3f6
+Note: switching to 'f0913a59fd1d0259990b264d906bdecd3488a3f6'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at f0913a5 added new commit1
+
+Deepesh Yadav@LAPTOP-H6M50F6C MINGW64 /e/Trainings/GTM_Playwright_JS_Batch11/GTM_PlaywrightTS_BATCH11 ((f0913a5...))
+$ git branch
+* (HEAD detached at f0913a5)
+  dy_conflict_branch
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

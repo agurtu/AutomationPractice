@@ -1,0 +1,491 @@
+########### Create GitHub Account #################
+1. go to github.com
+2. click on signup button.
+3. enter your email
+4. enter unique password
+5. enter unique username.
+6. select check box
+7. click on create account button.
+8. Verify user account with puzzle. (Sometime it does not show)
+9. User will receive verification code. -> Enter verification code.
+10. Account Creation is successful.
+
+##############  Create GitHub Repository #################
+1. Once successfully login to GitHub account
+2. click on create repository button.
+3. Provide Repository name.  e.g. AutomationPractice
+4. Provide Repository description.
+5. Select Readme file option.
+6. Select Visibility Public/Private.
+7. Click on create repository button.
+8. Repository created successfully.
+
+############ Install Git Client (Git terminal) ##############
+
+1.  Download git client exe from given link
+    https://github.com/git-for-windows/git/releases/download/v2.54.0.windows.1/Git-2.54.0-64-bit.exe
+
+2. Once download is completed -> initiate git installation.
+3. During the git installation go with all default option and keep 
+   click on next button and complete the installation.
+
+############ Clone Repository on local system ###############
+1. Create a folder with name "Gitcode" in C driver.
+2. Open Gitcode folder ->  right click inside the folder.
+3. Click on Show more option -> click on 'Open git bash here' option.
+4. It will open git terminal
+5. run command 'git --help' on git terminal.
+   -> it will show all available command for git.
+
+6. Go to git server and copy git url form server
+   -> If not logged in , login first
+   ->  Open repository on server
+   ->  click on code(green) button.
+   -> It will show repository url
+   -> Copy the URL.
+
+7.  Navigate back to git terminal
+
+8. Run command to clone the repository.
+   -> git clone https://github.com/CPAWAR01/AutomationPractice.git
+
+
+9. It will clone repository on local and create folder repository name.
+
+######################## Push first file to git repository ################
+
+1. Got to Gitcode -> AutomationPractice -> Right click -> Show more option -> click on Open git Bash here
+   -> It will open git terminal in repository folder.
+
+2. Create a text file insider repository with name firstFile.txt, Add some content
+   to the file and save it.
+
+
+3. Go back to git terminal and run below command
+   ->  git status  : it will show your file in red color
+
+4. Add file to git tracking
+   -> git add <FileName>
+
+5. Check status again.
+   -> git status : New file will show in green color.
+
+6. Run these config commands to update the credentials 
+   -> git config --global user.email "chetanspawar34@gmail.com"
+   -> git config --global user.name "CPAWAR01"
+  
+
+7. Initiate commit operation with command
+  -> git commit -m "Added new file"
+  -> It will initiate commit operation.
+
+8. Initiate push operation with command
+  ->  git push
+  -> It will open one popup 
+  -> Select option Sign In with browser.
+  -> It will navigate to browser where we have authorize the git ecosystem.
+  -> login with git credentials
+  -> click on Authorize git ecosystem button.
+  -> Now push operation will be successful
+ 
+9. Open your git account and verify the git file should available on server.
+
+
+#######################################################
+Practice Session:
+
+1. Create 2 mores file with name file2.txt, file3.txt
+    and add some content to the files.
+2. push these files to the server
+   -> git status:  file will show in red.
+   -> git add <File1> <file2>
+   -> git status : files will show in green color
+   -> git commit -m "added 2 mores file"
+   -> git push : Files will be visible on GitHub server.
+
+3. Update File2.txt, delete file1.txt, rename firstFile.txt
+   -> git status:  file will show in red.
+   -> git add <File1> <file2>
+   -> git status : files will show in green color
+   -> git commit -m "added 2 mores file"
+   -> git push : Files will be visible on GitHub server.
+
+
+###################### Provide Common Repository Access ##################
+
+1. Created a common repository, add students are collaborator
+2. Each student will receive invitation on mail from sqatools
+3. Open mail -> click on view invitation -> accept invitation (do it from laptop)
+4. User will able to see all repository content.
+
+############ Create a folder in common repository ###################
+1. Get repository URL from server.
+   -> Open repository GTM_PlaywrightTS_BATCH14
+   -> click on code button 
+   -> click on copy clipboard.
+
+   URL : https://github.com/sqatools/GTM_PlaywrightTS_BATCH14.git
+
+
+2. Open your git terminal in GitCode folder.
+3. clone repository in GitCode folder with below command
+   -> git clone https://github.com/sqatools/GTM_PlaywrightTS_BATCH14.git
+ 
+4. Once repository is cloned successfully, it will create a folder with repository name.
+   e.g. GTM_PlaywrightTS_BATCH14
+
+5. Re-open git terminal inside repository folder.
+
+6. Create folder with your name in repository and add one text inside it.
+   -> Create folder with name : Deepesh
+   -> Create a filer inside your folder  Deepesh/FirstFile.txt
+   -> Add some content to the file -> save it.
+
+7. Run below command to push your folder to the server
+   -> git status  : it will show your folder in red color.
+   -> git add <foldername>
+   -> git status : It will show folder name in green color with filename
+   -> git commit -m "Added new folder with repo"
+   -> git push
+
+8. If push is rejected, then follow below steps multiple times until push is not successful.
+   -> git pull
+   -> It will open one Linux editor
+   -> we have to close that editor with command :wq
+   -> then try to push again
+   -> if push is fail again, then repeat all these steps.
+
+
+9. Once the push is successful, your folder name will be visible on server.
+
+
+######################### Create Feature branch and push to code #################
+
+
+1. Login to git account on server.
+2. Open repository
+3. click on branch dropdown default main branch will show.
+   -> click on View all branches.
+   -> Only main branch will show as name.
+
+4. Create new Branch
+   -> click on New branch button.
+   -> Provide branch name e.g   deepesh_branch
+   -> Select source branch : keep it default as main.
+   -> click on create new branch button.
+   -> Branch will be created successfully and it will show in the list.
+
+5. Open git terminal in Repository folder in your local system.
+   c/GitCode/GTM_PlaywrightTS_BATCH14
+
+6. Update repo code with below command
+   -> git pull 
+   -> It will pull all latest changes from server and newly created branches.
+
+7. switch to new branch.
+   -> git branch : It will show main as active branch in green color.
+   -> git checkout <branch_name> : copy branch name from server.
+   -> e.g. git checkout deepesh_branch :  Not it will switch to new branch.
+
+   branch 'deepesh_branch' set up to track 'origin/deepesh_branch'.
+   Switched to a new branch 'deepesh_branch'
+    
+   -> It will show your branch name as active brach.
+   Deepesh Yadav@LAPTOP-H6M50F6C MINGW64 /c/GitCode/GTM_PlaywrightTS_BATCH14 (deepesh_branch)  
+
+
+
+8.  Go to your dedicate folder in local directory and add file with name as deepesh_feature_file.txt
+   -> add some content to file and save it.
+
+
+9. Push file to feature branch.
+   -> git status: it will show file in red color
+   -> git add <filename>
+   -> git status : it will show file in green color
+   -> git commit -m "Added file to feature branch"
+   -> git push
+   -> It will push file to dedicate branch.
+
+10. Check newly added file should be available on server in your branch and your folder.
+   -> Go to git server
+   -> Select your branch name
+   -> Open your folder, your will see newly added file in available there.
+
+########### Create Pull Request (PR) ##################
+
+1. Once we open server we will see "Compare & pull request" button in green color.
+
+2. Click on "Compare & pull request" button.
+   
+3. Provide PR description : we have to provide all details about the pull request
+   -> what changes we done.
+   -> How many changes are affecting other
+   -> Upload evidences. screenshots, video recording.
+
+4. Click on Gear button of reviewer section  (right side)
+   -> here we can add all reviewer who is going to review code and approval pull request.
+   -> Click on gear icon -> select people to review code
+   -> People will get email notification after creating the pull request.
+
+5. Select assignee , it means owner of work done by.
+   -> You can select your self as assignee.
+
+6. click on Create pull request button.
+
+7. create pull request will show Pull requests Tab.
+
+################# Review Pull Request ######################
+
+1. Go pull request tab open your dedicated pull request 
+2. There are 4 tabs in pull request
+   - conversation : -> It will show all review comments and merge pull request button.
+                    -> Requester can resolve all the comments from this section.
+                    -> Once got approval, requester has to click on merge pull request button to close the PR
+                    -> One PR is merge changes will be available in main or target.
+
+  - Checks : all CI/CD pipeline is going to visible on inside the check section.
+  - Commits : All commits done by developer will show in this section.
+  - File Changed : -> It will list down all the file where developer has done the changes.
+                   -> Here it will show all updated lines in green or red color. (green : added line, red: removed lines)
+                   -> Reviewer can submit the review from submit review button and provide approval.
+
+                  
+  
+#############################################
+# command to create branch locally.
+-> git checkout -b "TestBranch"
+
+# command to push local branch to the server.
+-> git push --set-upstream origin TestBranch
+
+
+########################## Conflict scenario #######################
+
+1. Main branch : demofile.txt
+content : good morning
+
+
+2. Person1 Branch from main branch
+   -> for person1 : good morning, is base message
+   -> updated message : good morning, how are you?
+
+
+
+3. Person2: Branch from main branch
+   -> for person2 : "good morning" is base message
+
+
+4. Person1 -> create pull request -> merge into main.
+   -> Now demofile.txt modified in main branch
+   -> new content : good morning, how are you?
+
+
+5. Person2 -> create pull request -> try to merge in main
+   -> It will create a conflict scenario for person2
+   -> due to main branch base content has changed.
+
+6. Person2 has to resolve and push change manually, then it will resolve the issue.
+
+
+
+################## Step by step reproduce conflict scenario #####################
+1. Make your are in main branch, if not checkout to main branch
+   -> git checkout main : switch to main branch
+   -> git pull : update main changes from server.
+
+2. Create a file in your dedicated folder with content as good morning.
+   filename : demofile.txt
+   current branch : main branch
+
+   -> push this file to GitHub server.
+   -> git status
+   -> git add <filename>
+   -> git commit -m "added new file"
+   -> git push
+
+
+3. Create a branch for Person1 : dy_p1_branch.
+   -> git checkout -b "dy_p1_branch"
+   
+
+4. Update the demofile.txt with new content:
+   new content : good morning, how are you ? from Person1
+   
+   -> git status
+   -> git add <Filename>
+   -> git commit -m "added new file"
+   -> git push :  git push --set-upstream origin dy_p1_branch
+   -> File change will push person1 branch.
+
+5. switch to main branch. 
+   -> git checkout main.
+
+6. Create new branch for Person2 :  dy_p2_branch
+   -> git checkout -b "dy_p2_branch"
+   
+
+7. Update the demofile.txt with new content:
+   new content : good morning, Hope you are doing ? from Person2
+   git 
+   -> git status
+   -> git add <Filename>
+   -> git commit -m "added new file"
+   -> git push :  git push --set-upstream origin dy_p2_branch
+   -> File change will push person2 branch.
+
+
+8. Open git hub server, then it will show to create pull request for both new branches.
+
+9. Create a pull request from dy_p1_branch and merge into main.
+
+10. Create a pull request from dy_p2_branch and try to merge into main.
+  
+
+11. Resolve this issue on local system
+
+12. make sure you are on branch: dy_p2_branch
+
+13. Try to update branch2 from main branch
+   -> git pull origin main
+   -> It will update changes from main branch to dy_p2_branch
+
+Auto-merging Deepesh/demofile.txt
+CONFLICT (content): Merge conflict in Deepesh/demofile.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+14. Updated demofile.txt locally and , choose required content
+
+
+current content:
+
+<<<<<<< HEAD
+good morning, Hope you are doing ? from Person2
+=======
+good morning, how are you ? from Person1
+>>>>>>> 8c75a085e6e8c91d2a11604f7bb603eb6c7a2d3c
+
+
+Updated content:
+
+good morning, how are you ? Hope you are doing ? from  Person1, Person2
+
+
+
+15. Push this changes to dy_p2_branch
+   -> git status
+   -> git add <filename>
+   -> git commit -m "updated content"
+   -> git push
+
+
+############################################################################################################
+# check diff value in modified file
+-> git diff  <filename>
+-> It will show modified content
+
+# if multiple files are modified and want to check all changes diff, run below command
+-> git diff
+-> it will show changes in all files one by one in the terminal
+
+###############################
+# Revert local changes.
+-> git checkout <Filename>
+-> It will revert all local changes.
+
+# Revert changes from all modified file locally.
+-> git checkout .
+
+################################
+# Clean unwanted file/folder from local
+-> git clean -df  : It will clean all unwanted files and folder.
+-> git clean -df <file_path> : It will clean specific file with path.
+
+
+###############################
+# Restore file before pushing to restore.
+# it user has staged any files/ which is not required to push, then we can restore file.
+-> git restore --staged  Deepesh/FirstFile2.txt
+
+
+###############################
+# delete unused branch from local system.
+-> git branch -d dy_p2_branch
+
+# We can not delete current active branch.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
