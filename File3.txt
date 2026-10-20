@@ -1,0 +1,3 @@
+const [new Page] = await Promise.all([
+context.waitforEvent('page');
+page.click('#open-tab')]);

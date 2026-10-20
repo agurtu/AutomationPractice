@@ -1,0 +1,2 @@
+const frame = page.frame({name: 'payment-frame'});
+await frame.click ('#submit');
